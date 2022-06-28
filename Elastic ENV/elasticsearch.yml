@@ -14,13 +14,13 @@
 #
 # Use a descriptive name for your cluster:
 #
-cluster.name: elk-cluster
+cluster.name: elk-cluster #name your cluster
 #
 # ------------------------------------ Node ------------------------------------
 #
 # Use a descriptive name for the node:
 #
-node.name: elk1
+node.name: elk1 #name node
 #
 # Add custom attributes to the node:
 #
@@ -40,7 +40,7 @@ path.logs: /var/log/elasticsearch
 #
 # Lock the memory on startup:
 #
-#bootstrap.memory_lock: true
+#bootstrap.memory_lock: true #enable for first time boot lock Memory
 #
 # Make sure that the heap size is set to about half the memory available
 # on the system and that the owner of the process is allowed to use this
@@ -96,12 +96,15 @@ cluster.initial_master_nodes:
 #
 #action.destructive_requires_name: false
 
+#must enabled
 xpack.security.enabled: true
 
+#must enabled
 xpack.security.enrollment.enabled: true
 
 # Enable encryption for HTTP API client connections, such as Kibana, Logstash, and Agents
 
+#optional for encrypt transport http elasticsearch 
 #xpack.security.http.ssl:
 #  enabled: true
 #  keystore.path: http.p12
@@ -119,7 +122,7 @@ xpack.security.transport.ssl:
 http.host: 0.0.0.0
 transport.host: 0.0.0.0
 
-
+#feature ldap sync user for elastic
 xpack:
   security:
     authc:
