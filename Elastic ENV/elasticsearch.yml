@@ -53,7 +53,7 @@ path.logs: /var/log/elasticsearch
 # By default Elasticsearch is only accessible on localhost. Set a different
 # address here to expose this node on the network:
 #
-network.host: 10.8.60.197
+network.host: your-ip
 #
 # By default Elasticsearch listens for HTTP traffic on the first free port it
 # finds starting at 9200. Set a specific HTTP port here:
@@ -69,12 +69,12 @@ http.port: 9200
 
 
 discovery.seed_hosts:
-   - 10.8.60.192
-   - 10.8.60.193
+   - your-discovered-ip-in-cluster
+   - your-discovered-ip-in-cluster
 cluster.initial_master_nodes:
-   - 10.8.60.197
-   - 10.8.60.193
-   - 10.8.60.192
+   - your-ip-node-in-cluster
+   - your-ip-node-in-cluster
+   - your-ip-node-in-cluster
 
 
 #
@@ -130,7 +130,7 @@ xpack:
         ldap:
           ldap1:
             order: 0
-            url: "ldap://10.8.60.199:7389"
+            url: "ldap://ipldap:7389"
             bind_dn: "uid=sysadmin,cn=users,dc=demo,dc=lab"
             user_search:
               base_dn: "dc=demo,dc=lab"
